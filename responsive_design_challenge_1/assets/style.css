@@ -1,0 +1,120 @@
+/* styling for the grid-container*/
+.grid-container{
+  display: grid;
+  /* grid-template-areas:
+  'box box box'
+  'navbar navbar navbar'
+  'blank content ads'
+  'footer footer footer'; */
+  grid-template-columns: 10% 1fr 30%;
+  grid-template-rows: auto;
+}
+
+/* size of the cell containing the name of the article and its styling */
+.box{
+  grid-column: 1 / 2;
+  background-color: black;
+  height: 80px;
+  padding-left:20px;
+  color: white;
+  font-size: 25px;
+
+}
+
+
+/*styling for the navbar*/
+.navbar{
+  grid-column: 2 / 5;
+  background-color: #000;
+  height: 80px;
+}
+
+/* styling for the content which displays the actual article*/
+.content{
+  /* grid-column: 3/ 5; */
+  background-color: #fff;
+  height: 2500px;
+  padding: 50px;
+  font-size: 25px;
+  /* font-size: inherit; */
+  font-family: Helvetica, sans-serif;
+  font-weight: 300px;
+  color: #424242;
+}
+
+/* styluing for the heading */
+h1{
+  color: black;
+  font-weight: bold;
+}
+
+/* styling for the advertisements in the third column */
+.ads{
+  /* grid-column: 4 / 5; */
+  background-color: #fff;
+  height: 2200px;
+}
+
+/* styling for the footer containing more links */
+.footer{
+  grid-column: 1 / 5;
+  background: #000;
+  border: 1px #312b2bfa solid;
+  height: 200px;
+  padding-top: 16px;
+  color:  #dc6093;
+}
+
+/* styling for the blank column that shows the website is responsive for different screen sizes using colors */
+.blank{0
+  grid-column: 1/2;
+  grid-row: 2 ;
+  height: 2200px;
+}
+
+/* very first advertisement styling */
+#first_side_ad{
+  padding: 150px 0;
+}
+
+/*stling for all the links*/
+a{
+  color: #dc6093;
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  font-style: normal;
+}
+
+
+/* mobile */
+@media only screen
+  and (min-device-width: 1px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container{
+      background: red;
+    }
+  }
+
+/* tablet */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container{
+      background: blue;
+    }
+  }
+
+/* large desktop screen */
+@media only screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1440px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container{
+      background: orange;
+    }
+  }
